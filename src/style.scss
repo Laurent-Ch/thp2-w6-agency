@@ -28,21 +28,27 @@ $primary-color: black;
 $primary-bg: white;
 
 $secundary-color: white;
-$secundary-color: black;
+$secundary-bg: black;
 
 
 /*Darkmode. */
 .page-container {
   height: 100vh;
   width: 100vw;
-  
-  &.light{
+
+  &.light {
     color: $primary-color;
     background-color: $primary-bg;
   }
   
-  &.dark{
+  &.dark {
     color: $secundary-color;
-    background-color: $secundary-color;
+    background-color: $secundary-bg;
   }
+}
+
+/* Navbar */
+.Navbar {
+  display: flex;
+  justify-content: space-between;
 }

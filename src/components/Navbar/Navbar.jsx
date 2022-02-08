@@ -1,15 +1,14 @@
 import { Link } from 'react-router-dom';
+import DarkModeButton from 'components/DarkModeButton/DarkModeButton';
 
 const Navbar = () => {
   // SECOND TUTORIAL
   return (
-    <nav>
+    <nav className='Navbar'>
       <Link to="/">Home</Link>
-      <br />
       <Link to="/about">About</Link>
-      <br />
       <Link to="/works">Works</Link>
-      <br />
+      <DarkModeButton />
     </nav>
   )
 }
