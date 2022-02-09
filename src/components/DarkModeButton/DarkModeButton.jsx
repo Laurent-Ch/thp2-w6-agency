@@ -1,5 +1,5 @@
 import { React, useContext } from "react";
-import DarkModeContext from "contexts/DarkmodeContext";
+import DarkModeContext from "../../contexts/DarkmodeContext";
 
 const DarkModeButton = () => {
   
@@ -7,7 +7,10 @@ const DarkModeButton = () => {
   
   return (
     <div className="CountButtons">
-      <button onClick={darkmodeStatus.toggle}>switcheroo</button>
+      <label className="switch">
+        <input type="checkbox" onClick={darkmodeStatus.toggle}/>
+        <span className="slider round"></span>
+      </label>
     </div>
   );
   

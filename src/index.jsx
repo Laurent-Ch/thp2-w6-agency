@@ -2,13 +2,20 @@ import { React, useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './style.scss'; 
-import Home from 'pages/Home';
-import About from 'pages/About';
-import Works from 'pages/Works';
-import Navbar from 'components/Navbar/Navbar';
-import DarkModeContext from 'contexts/DarkmodeContext';
+import Home from './pages/Home/Home';
+import About from './pages/About/About';
+import Works from './pages/Works/Works';
+import Navbar from './components/Navbar/Navbar';
+import DarkModeContext from './contexts/DarkmodeContext';
+import ProjectDisplay from './pages/Works/components/ProjectDisplay/ProjectDisplay';
 
 const App = () => {
+  
+  let testArray = "company-study-case";
+  let newVariable = testArray.slice(0, -11);
+  console.log (testArray);
+  console.log(newVariable);
+  
   // Darkmode v1.
   // const [darkmode, setDarkmode] = useState(false);
 
@@ -40,7 +47,10 @@ const App = () => {
               <Routes>
                   <Route path="/" element={<Home />} />
                   <Route path="/about" element={<About />} />
-                  <Route path="/works" element={<Works />} />
+                  <Route path="/works" element={<Works />} >
+                    {/* Either put "/works here or in the Link creation" */}
+                    <Route path='/works/:company' element={<ProjectDisplay />} />
+                  </Route>
               </Routes>
           </main>
       </DarkModeContext.Provider>
