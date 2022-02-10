@@ -6,11 +6,11 @@ const ProjectDisplay = () => {
   const curatedCompany = company.slice(0, -11);
   const foundClient = projectData.find((client) => client.project.toLowerCase() === curatedCompany);
   return (
-    <> 
-      <div>{foundClient && foundClient.project}</div>
-      <div>{foundClient && foundClient.title}</div>
-      <div>{foundClient && foundClient.description}</div>
-    </>
+    <div className="project-display"> 
+      <div className="project-elt project-name">{foundClient && foundClient.project}</div>
+      <div className="project-elt project-pitch">{foundClient && foundClient.title}</div>
+      <div className="project-elt project-description">{foundClient && foundClient.description}</div>
+    </div>
   )
 }
 

@@ -6,7 +6,7 @@ const WorksNavbar = () => {
   return (
     projectData.map((project, index) => {
         return (
-          <div key={`project-number-${index}`}>
+          <div key={`project-number-${index}`} class="project-link">
             <Link to={`${project.project.toLowerCase()}-study-case`}>{project.project}</Link>
             <br />
           </div>
